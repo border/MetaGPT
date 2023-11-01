@@ -8,9 +8,11 @@
 
 from metagpt.provider.anthropic_api import Claude2 as Claude
 from metagpt.provider.openai_api import OpenAIGPTAPI as LLM
+from metagpt.provider.baidu_ernie_api import BaiduErnieAPI as Baidu
 
 DEFAULT_LLM = LLM()
 CLAUDE_LLM = Claude()
+BAIDU_LLM = Baidu()
 
 async def ai_func(prompt):
     """使用LLM进行QA

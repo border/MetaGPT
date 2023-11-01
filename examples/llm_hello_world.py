@@ -7,14 +7,19 @@
 """
 import asyncio
 
-from metagpt.llm import LLM, Claude
+from metagpt.llm import LLM, Claude, Baidu
 from metagpt.logs import logger
 
 
 async def main():
     llm = LLM()
     claude = Claude()
+    baidu = Baidu()
+
     logger.info(await claude.aask('你好，请进行自我介绍'))
+
+    logger.info(baidu.ask('请以「我爱中国」写一首藏头诗'))
+
     logger.info(await llm.aask('hello world'))
     logger.info(await llm.aask_batch(['hi', 'write python hello world.']))
 
@@ -24,6 +29,8 @@ async def main():
     logger.info(await llm.acompletion_batch_text([hello_msg]))
 
     logger.info(await llm.acompletion_text(hello_msg))
+    logger.info(await llm.acompletion_text(hello_msg))
+
     await llm.acompletion_text(hello_msg, stream=True)
 
 

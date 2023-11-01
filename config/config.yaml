@@ -8,7 +8,9 @@
 OPENAI_API_BASE: "https://api.openai.com/v1"
 #OPENAI_PROXY: "http://127.0.0.1:8118"
 #OPENAI_API_KEY: "YOUR_API_KEY"
-OPENAI_API_MODEL: "gpt-4"
+# OPENAI_API_MODEL: "gpt-4"
+# OPENAI_API_MODEL: "gpt-3.5-turbo-16k"
+OPENAI_API_MODEL: "gpt-3.5-turbo"
 MAX_TOKENS: 1500
 RPM: 10
 
@@ -21,6 +23,11 @@ RPM: 10
 
 #### if Anthropic
 #Anthropic_API_KEY: "YOUR_API_KEY"
+
+#### if Baidu Ernie
+#ERNIE_API_KEY : "YOUR_API_KEY"
+#ERNIE_SECRET_KEY : "YOUR_SECRET_KEY"
+ERNIE_API_BASE : "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/completions_pro"
 
 #### if AZURE, check https://github.com/openai/openai-cookbook/blob/main/examples/azure/chat.ipynb
 #### You can use ENGINE or DEPLOYMENT mode

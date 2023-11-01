@@ -68,6 +68,10 @@ class Config(metaclass=Singleton):
         self.domain = self._get("DOMAIN")
         self.spark_url = self._get("SPARK_URL")
 
+        self.ernie_api_key = self._get("ERNIE_API_KEY")
+        self.ernie_secret_key = self._get("ERNIE_SECRET_KEY")
+        self.ernie_api_base = self._get("ERNIE_API_BASE")
+
         self.claude_api_key = self._get("Anthropic_API_KEY")
         self.serpapi_api_key = self._get("SERPAPI_API_KEY")
         self.serper_api_key = self._get("SERPER_API_KEY")
