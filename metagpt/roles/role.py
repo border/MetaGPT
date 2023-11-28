@@ -234,7 +234,8 @@ class Role:
 
         for i in env_msgs:
             self.recv(i)
-
+        for i in self._rc.news:
+            logger.info(f"i.role: {i.role}, _setting: {self._setting}, \ti.content: {i.content}")
         news_text = [f"{i.role}: {i.content[:20]}..." for i in self._rc.news]
         if news_text:
             logger.debug(f'{self._setting} observed: {news_text}')

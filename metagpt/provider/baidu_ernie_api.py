@@ -60,7 +60,6 @@ class BaiduErnieAPI(BaseGPTAPI):
         msglist = []
         sysmsg = ""
         if type(messages) == str:
-            print("messages is a string")
             msglist = [
                 {
                     "role": "user", 
@@ -68,7 +67,6 @@ class BaiduErnieAPI(BaseGPTAPI):
                 }
             ]
         elif type(messages) == list:
-            print("messages is a list")
             for message in messages:
                 if message["role"] == "system":
                     sysmsg = message["content"]
@@ -82,10 +80,11 @@ class BaiduErnieAPI(BaseGPTAPI):
             'Content-Type': 'application/json'
         }
         
-        logger.info(payload)
+        # logger.info(f"Baidu Request payload: {payload}")
 
         response = requests.request("POST", url, headers=headers, data=payload)
-        response = json.loads(response.text.replace('false', '"false"'))
+        response = json.loads(response.text)
         if 'error_code' in response:
-            logger.error(response)
-        return response
+            logger.error(f"response: {response}, payload: {payload}")
+        # logger.info(f"Baidu Response: {response}")
+        return response.get("result")
