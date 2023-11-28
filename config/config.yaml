@@ -11,6 +11,7 @@ OPENAI_API_BASE: "https://api.openai.com/v1"
 # OPENAI_API_MODEL: "gpt-4"
 # OPENAI_API_MODEL: "gpt-3.5-turbo-16k"
 OPENAI_API_MODEL: "gpt-3.5-turbo"
+
 MAX_TOKENS: 1500
 RPM: 10
 
@@ -37,6 +38,9 @@ ERNIE_API_BASE : "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/c
 #OPENAI_API_VERSION: "YOUR_AZURE_API_VERSION"
 #DEPLOYMENT_NAME: "YOUR_DEPLOYMENT_NAME"
 #DEPLOYMENT_ID: "YOUR_DEPLOYMENT_ID"
+
+#### if zhipuai from `https://open.bigmodel.cn`. You can set here or export API_KEY="YOUR_API_KEY"
+# ZHIPUAI_API_KEY: "YOUR_API_KEY"
 
 #### for Search
 
